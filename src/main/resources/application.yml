@@ -1,0 +1,16 @@
+server:
+  port: 8082
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/blog?useSSL=false&serverTimezone=Asia/Shanghai
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: root
+  resources:
+    #static为你要放过的文件夹
+    static-locations: classpath:/static
+  mvc:
+    #放过static下的所有文件
+    static-path-pattern: /static/**
+  thymeleaf:
+    cache: false

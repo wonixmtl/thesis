@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="/static/editor/css/editormd.css">
+    <script type="text/javascript" th:src="@{https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js}"></script>
+    <script type="text/javascript" src="/static/editor/editormd.js"></script>
+</head>
+<body>
+    <div id="test-editor">
+        <textarea></textarea>
+    </div>
+
+    <script>
+        $(function() {
+            var editor = editormd("test-editor", {
+                width  : "90%",
+                height : 720,
+                theme : "gray",
+                path   : "../static/editor/lib/",
+                saveHTMLToTextarea : true, // 保存 HTML 到 Textarea
+                toolbarAutoFixed:true,//工具栏自动固定定位的开启与禁用
+            });
+        });
+    </script>
+</body>
+</html>
