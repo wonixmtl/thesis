@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th = "http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form th:action="@{/add}" method="post">
+        <label for="inputId" class="">工号</label>
+        <input type="text" name="id" id="inputId" class="" placeholder="工号" required="" autofocus="">
+        <label for="inputUsername" class="">姓名</label>
+        <input type="text" name="username" id="inputUsername" class="" placeholder="姓名" required="">
+        <label for="inputSex" class="">性别</label>
+        <input type="text" name="sex" id="inputSex" class="" placeholder="性别" required="">
+        <button type="submit">submit</button>
+    </form>
+</body>
+</html>

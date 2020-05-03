@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="zh" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -422,8 +422,8 @@ if __name__ == '__main__':
         <textarea style="display:none;"></textarea>
     </div>
 </div>
-<script src="js/jquery.min.js"></script>
-<script src="../editormd.js"></script>
+<script th:src="@{https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js}"></script>
+<script src="../static/editor/editormd.js"></script>
 <script type="text/javascript">
     var testEditor;
 
@@ -443,7 +443,7 @@ if __name__ == '__main__':
             value            : getCodeValue(),
             theme            : (localStorage.theme) ? localStorage.theme : "default",
             mode             : (localStorage.mode) ? localStorage.mode : "text/html",
-            path             : '../lib/'
+            path             : '../static/editor/lib/'
         });
 
         $("#get-code-btn").bind("click", function() {
